@@ -1,3 +1,4 @@
+import React from 'react';
 import React from "react";
 import Header from "../pages/Shared/Header/Header";
 import Footer from "../pages/Shared/Footer/Footer";
@@ -6,16 +7,14 @@ import Leftnav from "../pages/Shared/LeftNav/Leftnav";
 import Rightnav from "../pages/Shared/Rightnav/Rightnav";
 import { Outlet } from "react-router-dom";
 
-const Main = () => {
-  return (
-    <div>
-      <Header></Header>
+
+const Newslayout = () => {
+    return (
+        <div>
+             <Header></Header>
       <Container>
         <Row>
-          <Col lg={3}>
-            <Leftnav></Leftnav>           
-          </Col>
-          <Col lg={6}>
+          <Col lg={9}>
             <Outlet></Outlet>
           </Col>
           <Col lg={3}>
@@ -24,8 +23,8 @@ const Main = () => {
         </Row>
       </Container>
       <Footer></Footer>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default Main;
+export default Newslayout;

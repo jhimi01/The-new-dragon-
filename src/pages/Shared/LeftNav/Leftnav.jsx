@@ -17,14 +17,10 @@ const Leftnav = () => {
     <div>
       <h2>All Caterogy</h2>
       <div className="p-4" style={{ background: "#F4F4F4" }}>
-        {catagorieds.map((catag) => (
-          <p key={catag.id}>
-            <Link
-              className="text-secondary fs-5 text-decoration-none"
-              to={`catagory/${catag.id}`}
-            >
-              {catag.name}
-            </Link>
+        {catagorieds.map((category) => (
+          <p key={category.id}>
+            <Link className="text-secondary fs-5 text-decoration-none"
+              to={`/category/${category.id}`}>{category.name}</Link>
           </p>
         ))}
       </div>
