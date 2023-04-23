@@ -12,7 +12,7 @@ const Leftnav = () => {
       .then((data) => setCatagorieds(data))
       .catch((error) => console.error(error));
   }, []);
-  console.log(catagorieds);
+  // console.log(catagorieds);
   return (
     <div>
       <h2>All Caterogy</h2>
