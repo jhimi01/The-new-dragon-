@@ -7,8 +7,8 @@ import third from '../../../assets/3.png';
 
 const EditorsInside = () => {
     return (
-        <CardGroup>
-        <Card>
+        <CardGroup className='mt-5'>
+        <Card className='me-5'>
           <Card.Img variant="top" src={first} />
           <Card.Body>
             <Card.Title>Card title</Card.Title>
@@ -23,7 +23,7 @@ const EditorsInside = () => {
         </Card>
 
         
-        <Card>
+        <Card className='me-5'>
           <Card.Img variant="top" src={second} />
           <Card.Body>
             <Card.Title>Card title</Card.Title>

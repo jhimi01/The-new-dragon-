@@ -7,10 +7,17 @@ import { Container, Row, Col } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import AuthProvider, { AuthContext } from '../../../provider/AuthProvider';
+import Navigationbar from '../Navigationbar/Navigationbar';
 
 
 
 const Header = () => {
+
+
+
     return (
         <Container>
        <div className="text-center">
@@ -25,26 +32,7 @@ const Header = () => {
   I can be a React component, multiple React components, or just some text.
 </Marquee>
        </div>
-       <Navbar className='my-4' collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto">
-            <Nav.Link href="#features">Home</Nav.Link>
-            <Nav.Link href="#pricing">About</Nav.Link>
-            <Nav.Link href="#pricing">Career</Nav.Link>
-          </Nav>
-          <Nav className='d-flex'>
-            <Nav.Link href="#deets">
-                <img style={{width: '40px', height: '40px'}} src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="user" />
-            </Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-            <Button variant="dark">Login</Button>
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+       <Navigationbar></Navigationbar>
         </Container>
     );
 };

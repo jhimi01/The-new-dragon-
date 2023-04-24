@@ -65,9 +65,9 @@ const Newscard = ({ singlenews }) => {
         <Card.Text>
           <div>
             <p className="mb-0">{more ? details : details.slice(0, 300)}</p>
-            <h6 style={{ cursor: "pointer" }} onClick={seemore}>
+            <div style={{ cursor: "pointer",fontWeight:'bold' }} onClick={seemore}>
               {more ? "see less" : "see more"}
-            </h6>
+            </div>
           </div>
         </Card.Text>
         <Link to={`/news/${_id}`}>
