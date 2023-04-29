@@ -7,7 +7,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Rightnav from "../../pages/Shared/Rightnav/Rightnav";
 import { Outlet, useLoaderData, useParams } from "react-router-dom";
 import News from "../../pages/News/News/News";
-import Navigationbar from "../../pages/Shared/Navigationbar/Navigationbar";
 
 
 const Newslayout = () => {
@@ -19,6 +18,7 @@ const Newslayout = () => {
         <Row>
           <Col lg={9}>
           <News></News>
+          
             <Outlet></Outlet>
           </Col>
           <Col lg={3}>

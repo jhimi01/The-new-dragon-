@@ -2,10 +2,16 @@ import React, { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import { useState } from 'react';
 
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
+    const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
+
+
+
     const navigate = useNavigate();
     const location = useLocation();
     console.log('login page location', location)
@@ -22,10 +28,14 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                navigate(from, { replace: true })
+                navigate(from, { replace: true });
+                setSuccess('login successful')
+                setError('')
             })
             .catch(error => {
                 console.log(error);
+                setError(error.message)
+                setSuccess('')
             })
     }
 
@@ -50,6 +60,8 @@ const Login = () => {
                 <Button variant="primary" type="submit">
                     Login
                 </Button>
+                {error && <p style={{color: 'red'}}>{error}</p>}
+                {success && <p style={{color: 'green'}}>{success}</p>}
                 <br />
                 <Form.Text className="text-secondary">
                     Don't Have an Account? <Link to="/register">Register</Link>

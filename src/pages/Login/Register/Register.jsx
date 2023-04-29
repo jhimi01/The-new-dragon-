@@ -17,6 +17,7 @@ const Register = () => {
         const password = form.password.value;
 
         console.log(name, photo, email, password)
+        
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
@@ -41,7 +42,7 @@ const Register = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Photo URL</Form.Label>
-                    <Form.Control type="text" name='photo' placeholder="Photo URL" required />
+                    <Form.Control type="text" name='photo' placeholder="Photo URL" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -58,7 +59,8 @@ const Register = () => {
                         onClick={handleAccepted}
                         type="checkbox"
                         name="accept"
-                        label={<>Accept <Link to="/terms">Terms and Conditions</Link> </>} />
+                        label={<>Accept <Link to="/terms">Terms and Conditions</Link> </>}
+                         />
                 </Form.Group>
                 <Button variant="primary" disabled={!accepted} type="submit">
                     Register
