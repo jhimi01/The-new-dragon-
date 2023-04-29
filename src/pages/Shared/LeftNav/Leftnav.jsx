@@ -27,7 +27,7 @@ const Leftnav = () => {
       <div>
         <div style={{ background: "#F3F3F3" }} className="text-center p-4 my-3">
           <div className="mb-3">
-            <img src={kid1} />
+            <img style={{width: '100%'}} src={kid1} />
             <h5 className="mt-2">
               Bayern Slams Authorities Over Flight Delay to Club World Cup
             </h5>
@@ -37,7 +37,7 @@ const Leftnav = () => {
             </div>
           </div>
           <div className="mb-3">
-            <img src={kid2} />
+            <img style={{width: '100%'}} src={kid2} />
             <h5 className="mt-2">
               Bayern Slams Authorities Over Flight Delay to Club World Cup
             </h5>
@@ -47,7 +47,7 @@ const Leftnav = () => {
             </div>
           </div>
           <div className="mb-3">
-            <img src={kid3} />
+            <img style={{width: '100%'}} src={kid3} />
             <h5 className="mt-2">
               Bayern Slams Authorities Over Flight Delay to Club World Cup
             </h5>
